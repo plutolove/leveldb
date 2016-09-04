@@ -96,7 +96,6 @@
       <sourceFolder url="file://$MODULE_DIR$/db/db_impl.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/write_batch_internal.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/skiplist.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

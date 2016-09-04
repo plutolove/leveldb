@@ -62,6 +62,8 @@ inline void MemoryBarrier() {
 
 // Gcc on x86
 #elif defined(ARCH_CPU_X86_FAMILY) && defined(__GNUC__)
+        //内存屏障，多线程情况下在MemoryBarryer之后的代码不能移动到MemoryBarryer
+        // 之前去，编译器也不能对MemoryBarryer之后的代码进行优化
 inline void MemoryBarrier() {
   // See http://gcc.gnu.org/ml/gcc/2003-04/msg01180.html for a discussion on
   // this idiom. Also see http://en.wikipedia.org/wiki/Memory_ordering.
@@ -128,7 +130,7 @@ class AtomicPointer {
   void* rep_;
  public:
   AtomicPointer() { }
-  explicit AtomicPointer(void* p) : rep_(p) {}
+  explicit AtomicPointer(void* p) : rep_(p) {}//不能作隐式转换
   inline void* NoBarrier_Load() const { return rep_; }
   inline void NoBarrier_Store(void* v) { rep_ = v; }
   inline void* Acquire_Load() const {

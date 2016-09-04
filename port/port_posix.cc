@@ -3,10 +3,9 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "port/port_posix.h"
-
-#include <cstdlib>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 namespace leveldb {
 namespace port {

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(leveldb)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")# -Wall -pthread")
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/include)
 
@@ -98,5 +98,6 @@ set(SOURCE_FILES
     util/posix_logger.h
     util/random.h
     util/status.cc main.cpp)
-
+find_package (Threads REQUIRED)
 add_executable(leveldb ${SOURCE_FILES})
+target_link_libraries(leveldb Threads::Threads)
