@@ -97,7 +97,18 @@ set(SOURCE_FILES
     util/options.cc
     util/posix_logger.h
     util/random.h
-    util/status.cc main.cpp)
+    util/status.cc main.cpp
+        TEST/testharness.cc
+        TEST/testharness.h
+        )
+
+add_library(leveldb ${SOURCE_FILES})
 find_package (Threads REQUIRED)
-add_executable(leveldb ${SOURCE_FILES})
-target_link_libraries(leveldb Threads::Threads)
+target_link_libraries(leveldb Threads::Threads )
+
+add_executable(arena_test TEST/arena_test.cc)
+target_link_libraries(arena_test leveldb)
+
+add_executable(coding_test TEST/coding_test.cc)
+target_link_libraries(coding_test leveldb)
+

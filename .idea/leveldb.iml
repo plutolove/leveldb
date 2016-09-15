@@ -16,7 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/leveldb/status.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/leveldb/filter_policy.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/leveldb/write_batch.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/table/block.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/table/format.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/table/block_builder.h" isTestSource="false" />
@@ -33,13 +33,11 @@
       <sourceFolder url="file://$MODULE_DIR$/table/table_builder.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/table/iterator.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/table/table.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/helpers/memenv/memenv.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/helpers/memenv/memenv.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/posix_logger.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/logging.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/util/arena.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/util/histogram.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/coding.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/util/arena.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/crc32c.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/cache.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/comparator.cc" isTestSource="false" />
@@ -47,18 +45,24 @@
       <sourceFolder url="file://$MODULE_DIR$/util/coding.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/env.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/bloom.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/util/arena.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/filter_policy.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/hash.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/crc32c.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/mutexlock.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/status.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/logging.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/util/histogram.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/util/arena.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/env_posix.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/histogram.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/random.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/util/hash.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/helpers/memenv/memenv.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/helpers/memenv/memenv.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TEST/testharness.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TEST/coding_test.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TEST/testharness.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TEST/arena_test.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/port/thread_annotations.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/port/port.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/port/port_posix.cc" isTestSource="false" />
@@ -86,12 +90,12 @@
       <sourceFolder url="file://$MODULE_DIR$/db/version_set.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/filename.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/log_reader.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/db/log_reader.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/log_format.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/dumpfile.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/db/repair.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/db_impl.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/table_cache.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/db/log_reader.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/db/repair.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/version_edit.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/db_impl.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/write_batch_internal.h" isTestSource="false" />
