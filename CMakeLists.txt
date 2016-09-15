@@ -111,3 +111,9 @@ target_link_libraries(arena_test leveldb)
 
 add_executable(coding_test TEST/coding_test.cc)
 target_link_libraries(coding_test leveldb)
+
+add_executable(hash_test TEST/hash_test.cc)
+target_link_libraries(hash_test leveldb)
+
+add_executable(crc32c_test TEST/crc32c_test.cc)
+target_link_libraries(crc32c_test leveldb)
