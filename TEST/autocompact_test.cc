@@ -5,8 +5,8 @@
 #include "leveldb/db.h"
 #include "db/db_impl.h"
 #include "leveldb/cache.h"
-#include "util/testharness.h"
-#include "util/testutil.h"
+#include "testharness.h"
+#include "testutil.h"
 
 namespace leveldb {
 

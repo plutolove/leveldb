@@ -4,7 +4,7 @@
 
 #include "util/coding.h"
 
-#include "util/testharness.h"
+#include "testharness.h"
 
 namespace leveldb {
 

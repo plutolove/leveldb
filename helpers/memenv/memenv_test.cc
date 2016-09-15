@@ -7,7 +7,7 @@
 #include "db/db_impl.h"
 #include "leveldb/db.h"
 #include "leveldb/env.h"
-#include "util/testharness.h"
+#include "TEST/testharness.h"
 #include <string>
 #include <vector>
 

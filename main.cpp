@@ -3,20 +3,10 @@
 //
 
 #include <iostream>
-#include "leveldb/db.h"
-
+typedef long long LL;
 int main() {
-    std::cout << "Hello, hac" << std::endl;
-    leveldb::DB* db;
-    leveldb::Options options;
-    options.create_if_missing = true;
-    std::string dbpath = "testdb";
-    leveldb::Status status = leveldb::DB::Open(options, dbpath, &db);
-    assert(status.ok());
-    std::string key = "sdfg";
-    //std::string val = "test_value";
-    //status = db->Put(leveldb::WriteOptions(), key, val);
-    std::string outval;
-    status = db->Get(leveldb::ReadOptions(), key, &outval);
-    std::cout << key << " : " << outval << std::endl;
+    LL a00, a01, a10, a11;
+    std::cin >> a00 >> a01 >> a10 >> a11;
+
+    return 0;
 }

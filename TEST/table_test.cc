@@ -17,8 +17,8 @@
 #include "table/block_builder.h"
 #include "table/format.h"
 #include "util/random.h"
-#include "util/testharness.h"
-#include "util/testutil.h"
+#include "testharness.h"
+#include "testutil.h"
 
 namespace leveldb {
 

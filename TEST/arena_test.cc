@@ -3,9 +3,8 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "util/arena.h"
-
 #include "util/random.h"
-#include "util/testharness.h"
+#include "testharness.h"
 
 namespace leveldb {
 
