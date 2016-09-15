@@ -178,7 +178,6 @@ namespace leveldb {
         PutLengthPrefixedSlice(&s, Slice("foo"));
         PutLengthPrefixedSlice(&s, Slice("bar"));
         PutLengthPrefixedSlice(&s, Slice(std::string(200, 'x')));
-        puts("-");
         Slice input(s);
         Slice v;
         ASSERT_TRUE(GetLengthPrefixedSlice(&input, &v));
