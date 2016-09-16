@@ -105,7 +105,6 @@ namespace leveldb {
 
         // No copying allowed
         Cache(const Cache &);
-
         void operator=(const Cache &);
     };
 
