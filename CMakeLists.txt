@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(leveldb)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")# -Wall -pthread")
+set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/include)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 set(SOURCE_FILES
         db/builder.cc
@@ -102,9 +103,10 @@ set(SOURCE_FILES
         TEST/testharness.h
         )
 
+
 add_library(leveldb ${SOURCE_FILES})
 find_package (Threads REQUIRED)
-target_link_libraries(leveldb Threads::Threads )
+target_link_libraries(leveldb Threads::Threads)
 
 add_executable(arena_test TEST/arena_test.cc)
 target_link_libraries(arena_test leveldb)
@@ -117,3 +119,10 @@ target_link_libraries(hash_test leveldb)
 
 add_executable(crc32c_test TEST/crc32c_test.cc)
 target_link_libraries(crc32c_test leveldb)
+
+add_executable(cache_test TEST/cache_test.cc)
+target_link_libraries(cache_test leveldb)
+
+add_executable(mutex main.cpp)
+find_package (Threads REQUIRED)
+target_link_libraries(mutex Threads::Threads)

@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <malloc.h>
 
 #include "leveldb/cache.h"
 #include "port/port.h"
@@ -24,7 +25,6 @@ namespace leveldb {
 // are kept in a circular doubly linked list ordered by access time.
         struct LRUHandle {
             void *value;
-
             void (*deleter)(const Slice &, void *value);
 
             LRUHandle *next_hash;
@@ -32,7 +32,7 @@ namespace leveldb {
             LRUHandle *prev;
             size_t charge;      // TODO(opt): Only allow uint32_t?
             size_t key_length;
-            uint32_t refs;
+            uint32_t refs;// the number of reference
             uint32_t hash;      // Hash of key(); used for fast sharding and comparisons
             char key_data[1];   // Beginning of key
 

@@ -16,13 +16,14 @@ namespace leveldb {
 
         class BloomFilterPolicy : public FilterPolicy {
         private:
-            size_t bits_per_key_;
-            size_t k_;
+            size_t bits_per_key_;//表示key值的位數
+            size_t k_;//表示Hash的次數
 
         public:
             explicit BloomFilterPolicy(int bits_per_key)
                     : bits_per_key_(bits_per_key) {
                 // We intentionally round down to reduce probing cost a little bit
+                // http://pages.cs.wisc.edu/~cao/papers/summary-cache/node8.html
                 k_ = static_cast<size_t>(bits_per_key * 0.69);  // 0.69 =~ ln(2)
                 if (k_ < 1) k_ = 1;
                 if (k_ > 30) k_ = 30;
@@ -44,7 +45,7 @@ namespace leveldb {
                 bits = bytes * 8;
 
                 const size_t init_size = dst->size();
-                dst->resize(init_size + bytes, 0);
+                dst->resize(init_size + bytes, 0); //resize the table
                 dst->push_back(static_cast<char>(k_));  // Remember # of probes in filter
                 char *array = &(*dst)[init_size];
                 for (int i = 0; i < n; i++) {
