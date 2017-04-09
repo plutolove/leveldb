@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(leveldb)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")# -Wall -pthread")
+set(${CMAKE_CXX_COMPILER} /usr/bin/clang++)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")# -Wall -pthread")
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/include)
 
@@ -97,7 +99,7 @@ set(SOURCE_FILES
         util/options.cc
         util/posix_logger.h
         util/random.h
-        util/status.cc main.cpp
+        util/status.cc main.cc
         TEST/testharness.cc
         TEST/testharness.h
         )
