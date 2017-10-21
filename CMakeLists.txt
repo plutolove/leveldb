@@ -108,14 +108,17 @@ add_library(leveldb ${SOURCE_FILES})
 find_package (Threads REQUIRED)
 target_link_libraries(leveldb Threads::Threads )
 
-add_executable(arena_test TEST/arena_test.cc)
-target_link_libraries(arena_test leveldb)
+#add_executable(arena_test TEST/arena_test.cc)
+#target_link_libraries(arena_test leveldb)
 
-add_executable(coding_test TEST/coding_test.cc)
-target_link_libraries(coding_test leveldb)
+#add_executable(coding_test TEST/coding_test.cc)
+#target_link_libraries(coding_test leveldb)
 
-add_executable(hash_test TEST/hash_test.cc)
-target_link_libraries(hash_test leveldb)
+#add_executable(hash_test TEST/hash_test.cc)
+#target_link_libraries(hash_test leveldb)
 
-add_executable(crc32c_test TEST/crc32c_test.cc)
-target_link_libraries(crc32c_test leveldb)
+#add_executable(crc32c_test TEST/crc32c_test.cc)
+#target_link_libraries(crc32c_test leveldb)
+
+add_executable(main main.cc)
+target_link_libraries(main leveldb)
