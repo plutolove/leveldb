@@ -22,9 +22,13 @@ int main() {
   status = db->Get(leveldb::ReadOptions(), key, &value);
   assert(status.ok());
   cout << value << endl;
-  for(int i=0; i<50000; i++) {
+  for(int i=500000; i<500001; i++) {
     status = db->Put(leveldb::WriteOptions(), to_string(i)+"dfgdf", to_string(i)+"fdhfghjdfg");
     assert(status.ok());
+    if(i == 499999 + 1) {
+      int x;
+      cin>>x;
+    }
   }
   return 0;
 }

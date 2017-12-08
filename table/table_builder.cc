@@ -68,7 +68,7 @@ namespace leveldb {
     }
 
     TableBuilder::~TableBuilder() {
-        assert(rep_->closed);  // Catch errors where caller forgot to call Finish()
+        assert(rep_->closed);  // Catch errors whejre caller forgot to call Finish()
         delete rep_->filter_block;
         delete rep_;
     }

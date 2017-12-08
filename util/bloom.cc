@@ -16,8 +16,8 @@ namespace leveldb {
 
         class BloomFilterPolicy : public FilterPolicy {
         private:
-            size_t bits_per_key_;
-            size_t k_;
+            size_t bits_per_key_; //一个key占bit数
+            size_t k_; //hash次数
 
         public:
             explicit BloomFilterPolicy(int bits_per_key)
