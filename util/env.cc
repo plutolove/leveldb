@@ -32,7 +32,7 @@ namespace leveldb {
         if (info_log != NULL) {
             va_list ap;
             va_start(ap, format);
-            info_log->logv(format, ap);
+            info_log->Logv(format, ap);
             va_end(ap);
         }
     }
