@@ -32,3 +32,21 @@ int main() {
   }
   return 0;
 }
+
+/*
+#include "db/skiplist.h"
+#include "util/arena.h"
+struct Cmp {
+    int operator()(const std::string& a, const std::string& b) const {
+      if (a < b) return -1;
+      else return 1;
+    }
+};
+
+int main() {
+  leveldb::Arena a;
+  Cmp c1;
+  leveldb::SkipList<std::string, Cmp> list(c1, &a);
+  list.Insert("sdfgsdfg");
+  return 0;
+}*/
